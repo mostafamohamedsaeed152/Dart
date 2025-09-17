@@ -1,24 +1,33 @@
-void main()
-{
-  int grade = 85;
-  if (grade >= 90) {
-    print("A");
+import 'dart:io';
+
+void main() {
+
+  print("Enter your grade (0-100):");
+  int grade = int.parse(stdin.readLineSync()!);
+  
+  if (grade >= 90 && grade <= 100) {
+    print("Grade: A");
   } else if (grade >= 80 && grade < 90) {
-    print("B");
+    print("Grade: B");
   } else if (grade >= 70 && grade < 80) {
-    print("C");
-  } else if (grade < 70) {
-    print("f");
-  } 
+    print("Grade: C");
+  } else if (grade >= 0 && grade < 70) {
+    print("Grade: F");
+  }
 
 
+  print("Even numbers from 1 to 10:");
   for (int i = 1; i <= 10; i++) {
     if (i % 2 == 0) {
       print(i);
     }
   }
-  int daynumber = 3;
-  switch (daynumber) {
+
+
+  print("Enter a number (1-7) for weekday:");
+  int dayNumber = int.parse(stdin.readLineSync()!);
+  
+  switch (dayNumber) {
     case 1:
       print("Monday");
       break;
@@ -40,7 +49,5 @@ void main()
     case 7:
       print("Sunday");
       break;
-    default:
-      print("Invalid day number");
   }
 }
