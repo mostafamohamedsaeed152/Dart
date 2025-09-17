@@ -11,7 +11,7 @@ void main() {
     print("Grade: B");
   } else if (grade >= 70 && grade < 80) {
     print("Grade: C");
-  } else if (grade >= 0 && grade < 70) {
+  } else if (grade < 70) {
     print("Grade: F");
   }
 
@@ -51,4 +51,5 @@ void main() {
       break;
   }
 }
+
 
