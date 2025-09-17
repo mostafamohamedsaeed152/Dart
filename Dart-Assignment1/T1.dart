@@ -2,7 +2,6 @@ import 'dart:io';
 
 void main() {
 
-  // Taking two numbers as input
   print("Enter the first number:");
   double num1 = double.parse(stdin.readLineSync()!);
   
@@ -39,3 +38,4 @@ void main() {
   print("Name: ${name ?? 'Unknown'}");
   print("Name length: ${name?.length}");
 }
+
