@@ -24,7 +24,7 @@ void main() {
   }
 
 
-  print("Enter a number (1-7) for weekday:");
+  print("Enter a number for weekday:");
   int dayNumber = int.parse(stdin.readLineSync()!);
   
   switch (dayNumber) {
@@ -51,3 +51,4 @@ void main() {
       break;
   }
 }
+
