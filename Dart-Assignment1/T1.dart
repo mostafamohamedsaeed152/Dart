@@ -1,8 +1,15 @@
+import 'dart:io';
+
 void main() {
-  double num1 = 15.5;
-  double num2 = 8.3;
+
+  // Taking two numbers as input
+  print("Enter the first number:");
+  double num1 = double.parse(stdin.readLineSync()!);
   
-  print("Numbers: $num1 and $num2");
+  print("Enter the second number:");
+  double num2 = double.parse(stdin.readLineSync()!);
+  
+  print("\nNumbers: $num1 and $num2");
   print("Sum: ${num1 + num2}");
   print("Product: ${num1 * num2}");
   print("Difference: ${num1 - num2}");
@@ -14,22 +21,21 @@ void main() {
   } else {
     print("$num1 is equal to $num2");
   }
-    
+
   if (num1 > 0 && num2 > 0) {
     print("Both are positive");
   }
   
   if (num1 > 0 || num2 > 0) {
     print("At least one is positive");
+  } else {
+    print("Both numbers are non-positive");
   }
-    
+  
   String? name = null;
-  
   print("Name: ${name ?? 'Unknown'}");
-  
   print("Name length: ${name?.length}");
-  
   name = "RA3DON";
   print("Name: ${name ?? 'Unknown'}");
-  print("Name length: ${name.length}");
+  print("Name length: ${name?.length}");
 }
